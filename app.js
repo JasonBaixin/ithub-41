@@ -1,9 +1,11 @@
 const express =require('express')
 
+//加载路由
+const router =require('./router')
+
 const app =express()
 
-app.get('/',(req,res)=>{
-    res.send('hello world')
-})
+//使用路由模块
+app.use(router)
 
 app.listen(3000,()=> console.log('running...'))

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/JasonBaixin/ithub-41#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "moment": "^2.21.0",
+    "mysql": "^2.15.0"
   }
 }
