@@ -58,9 +58,9 @@
     $('#signup_form').on('submit', handleSubmit)
 
     function handleSubmit(e) {
-      e.preventDefault()
-      var formData = $(this).serialize()
-      $.ajax({
+      e.preventDefault()//阻止表单默认提交
+      var formData = $(this).serialize()//表单数据
+      $.ajax({//采集表单数据
         url: '/signup',
         type: 'post',
         data: formData,

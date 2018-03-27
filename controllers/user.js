@@ -31,6 +31,7 @@ exports.signup = (req, res) => {
   //    这里校验邮箱和昵称是否被占用
 
   // 校验邮箱是否被占用
+  //express默认不解析  使用body-parser表单验证插件
   connection.query(
     'SELECT * FROM `users` WHERE `email`=?', [body.email],
     (err, results) => {
