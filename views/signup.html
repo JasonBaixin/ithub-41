@@ -56,11 +56,10 @@
     //    发起 ajax 异步请求
     //    根据服务端响应结果做交互处理
     $('#signup_form').on('submit', handleSubmit)
-
     function handleSubmit(e) {
-      e.preventDefault()//阻止表单默认提交
-      var formData = $(this).serialize()//表单数据
-      $.ajax({//采集表单数据
+      e.preventDefault()
+      var formData = $(this).serialize()
+      $.ajax({
         url: '/signup',
         type: 'post',
         data: formData,
@@ -69,7 +68,8 @@
           console.log(data)
           switch(data.code) {
             case 200:
-              window.location.href = '/'
+              // 注册成功，跳转到登录页
+              window.location.href = '/signin'
               break
             case 1:
               window.alert('邮箱已存在，请更换重试')
